@@ -1,11 +1,11 @@
 # Multi-robot-multi-task scheduling module
 
-This repository contains the code for the multi-robot-multi-task scheduling module. The file structure is as follows:
+This repository contains the code for the multi-robot-multi-task scheduling module in our [paper](https://chemrxiv.org/engage/chemrxiv/article-details/66b50a2c01103d79c53fed30). The file structure is as follows:
 
 
 ## Directory tree
 > + simulaton 
->   + Code folder for generate simulation result in paper
+>   + Code folder for generate simulation result
 > + real_scheduling
 >   + Code folder for real scheduling
 > + README.md
