@@ -1,0 +1,7 @@
+image: ./lab_simu_low_reso.pgm
+resolution: 1.200000
+origin: [-9.82159, -5.5087165, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+
