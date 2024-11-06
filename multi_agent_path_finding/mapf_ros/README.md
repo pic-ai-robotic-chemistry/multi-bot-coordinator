@@ -4,10 +4,6 @@
   <img src='./doc/logo.png'/>
 </div>
 
-<div align='center'>
-  English | <a href='./README.zh-CN.md'>中文</a>
-</div>
-
 ---
 
 <!-- TOC -->
@@ -61,7 +57,7 @@ The following algorithms are currently implemented:
 
 ## Example
 
-The test case repository shown in gif is in [https://github.com/speedzjy/ridgeback_mapf](https://github.com/speedzjy/ridgeback_mapf)
+The test case repository shown in gif is in [ridgeback_mapf](../ridgeback_mapf)
 
 ### Conflict-Based Search (CBS)
 
@@ -116,7 +112,7 @@ catkin_make
 
 Take a look at the [code structure bellow](#code_structure), it might help.
 
-The following is the sample code for launch, which is placed in the [mapf_base/launch](https://github.com/speedzjy/mapf_ros/blob/main/mapf_base/launch/mapf_example.launch)
+The following is the sample code for launch, which is placed in the [mapf_base/launch](./mapf_base/launch/mapf_example.launch)
 ### example launch
 ```xml
 <launch>
@@ -150,7 +146,7 @@ The following is the sample code for launch, which is placed in the [mapf_base/l
 </launch>
 ```
 
-There are three param files that need to be configured: [mapf_params.yaml](https://github.com/speedzjy/mapf_ros/blob/main/mapf_base/params/mapf_params.yaml), [costmap_params](https://github.com/speedzjy/mapf_ros/blob/main/mapf_base/params/costmap_params.yaml) and [ecbs_params.yaml](https://github.com/speedzjy/mapf_ros/blob/main/mapf_base/params/ecbs_params.yaml)(If choose ecbs planner).
+There are three param files that need to be configured: [mapf_params.yaml](./mapf_base/params/mapf_params.yaml), [costmap_params](./mapf_base/params/costmap_params.yaml) and [ecbs_params.yaml](./mapf_base/params/ecbs_params.yaml)(If choose ecbs planner).
 
 ### Notes: (very importment)
 It is **strongly recommended** to use **low-resolution maps for mapf planning** search and **high-resolution maps for local planning** with a single robot. The reasons are as follows:

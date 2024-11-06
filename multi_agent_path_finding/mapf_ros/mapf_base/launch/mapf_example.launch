@@ -1,7 +1,7 @@
 <launch>
 
   <!-- 1.load the low resolution map -->
-  <arg name="map" default="rgmap0217_low_reso.yaml" />
+  <arg name="map" default="lab_simu_low_reso.yaml" />
   <group ns="mapf_base">
     <node name="map_server" pkg="map_server" type="map_server"
       args="$(find ridgeback_navigation)/maps/$(arg map)" />
