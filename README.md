@@ -24,5 +24,5 @@ This repository contains the code for the multi-robot-multi-task scheduling modu
   <img src='./multi-robot-multi-task_scheduling/img/scheduling_eg.png'/>
 </div>
 
-**For more detailed instructions, please refer to the [README.md](./multi-robot-multi-task_scheduling/README.md).**
+**For more detailed instructions, please refer to the [scheduling-README.md](./multi-robot-multi-task_scheduling/README.md).**
 
