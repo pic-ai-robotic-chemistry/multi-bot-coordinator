@@ -1,0 +1,212 @@
+{
+    "workstation_list": [
+        {
+            "id": 1602558355258351616,
+            "workstationType": "starting_station",
+            "name": "starting_station",
+            "code": "starting_station",
+            "status": "IDLE",
+            "electricityQuantity": null,
+            "bottleSlotCount": 160,
+            "bottleCount": 1,
+            "isRobot": 0,
+            "machineList": [
+                {
+                    "machineTypeCode": "starting_station",
+                    "channelList": null
+                }
+            ],
+            "bottleList": [
+                {
+                    "bottleCode": "bottle-1809399055726551045",
+                    "rackId": 1809399055726551043
+                }
+            ],
+            "sectionList": [
+                {
+                    "sectionCode": "lab",
+                    "sectionName": "lab"
+                }
+            ],
+            "remark": null
+        },
+        {
+            "id": 1612694273754807297,
+            "workstationType": "robot",
+            "name": "robot_0",
+            "code": "robot_0",
+            "status": "IDLE",
+            "electricityQuantity": 95.0,
+            "currentStation": "starting_station",
+            "bottleSlotCount": 40,
+            "bottleCount": 0,
+            "isRobot": 1,
+            "machineList": [
+                {
+                    "machineTypeCode": "robot",
+                    "channelList": null
+                }
+            ],
+            "bottleList": [],
+            "sectionList": [
+                {
+                    "sectionCode": "lab",
+                    "sectionName": "lab"
+                }
+            ],
+            "remark": null
+        },
+        {
+            "id": 1610457648401096704,
+            "workstationType": "magnetic_stirring",
+            "name": "magnetic_stirring",
+            "code": "magnetic_stirring",
+            "status": "IDLE",
+            "electricityQuantity": null,
+            "bottleSlotCount": 10,
+            "bottleCount": 0,
+            "isRobot": 0,
+            "machineList": [
+                {
+                    "machineTypeCode": "magnetic_stirring",
+                    "channelList": null
+                }
+            ],
+            "bottleList": [],
+            "sectionList": [
+                {
+                    "sectionCode": "lab",
+                    "sectionName": "lab"
+                }
+            ],
+            "remark": null
+        }
+    ],
+    "bottle_execute_record_list": [],
+    "robot_list": [
+        {
+            "id": 1612694273754807297,
+            "workstationType": "robot",
+            "name": "robot_0",
+            "code": "robot_0",
+            "status": "IDLE",
+            "electricityQuantity": 95.0,
+            "currentStation": "starting_station",
+            "bottleSlotCount": 40,
+            "bottleCount": 0,
+            "isRobot": 1,
+            "machineList": [
+                {
+                    "machineTypeCode": "robot",
+                    "channelList": null
+                }
+            ],
+            "bottleList": [],
+            "sectionList": [
+                {
+                    "sectionCode": "lab",
+                    "sectionName": "lab"
+                }
+            ],
+            "remark": null
+        }
+    ],
+    "task_list": [
+        {
+            "name": "simple_example",
+            "steps": [
+                {
+                    "id": 5609691746369538,
+                    "index": 1,
+                    "workstation": "starting_station",
+                    "detail": [
+                        {
+                            "material": null,
+                            "concentration": null,
+                            "value": null,
+                            "vials_no": "1",
+                            "actual_no": null,
+                            "material_code": null,
+                            "concentration_unit_code": null
+                        }
+                    ],
+                    "time": null,
+                    "parameters": [
+                        {
+                            "machineTypeCode": "starting_station",
+                            "param": {
+                                "bottle_appoint": "0",
+                                "bottle_count": "1",
+                                "bottle_mapping_list": ""
+                            }
+                        }
+                    ],
+                    "condition": null,
+                    "status": 0,
+                    "branch_code": 0
+                },
+                {
+                    "id": 5609691746369537,
+                    "index": 2,
+                    "workstation": "magnetic_stirring",
+                    "detail": [
+                        {
+                            "material": null,
+                            "concentration": null,
+                            "value": null,
+                            "vials_no": "1",
+                            "actual_no": null,
+                            "material_code": null,
+                            "concentration_unit_code": null
+                        }
+                    ],
+                    "time": 10.0,
+                    "parameters": [
+                        {
+                            "machineTypeCode": "magnetic_stirring",
+                            "param": {
+                                "temperature": "20",
+                                "speed": "500"
+                            }
+                        }
+                    ],
+                    "condition": null,
+                    "status": 0,
+                    "branch_code": 0
+                },
+                {
+                    "id": 5609691746402304,
+                    "index": 3,
+                    "workstation": "starting_station",
+                    "detail": [
+                        {
+                            "material": null,
+                            "concentration": null,
+                            "value": null,
+                            "vials_no": "1",
+                            "actual_no": null,
+                            "material_code": null,
+                            "concentration_unit_code": null
+                        }
+                    ],
+                    "time": null,
+                    "parameters": [
+                        {
+                            "machineTypeCode": "starting_station",
+                            "param": {
+                                "bottle_appoint": "0",
+                                "bottle_count": "1",
+                                "bottle_mapping_list": ""
+                            }
+                        }
+                    ],
+                    "condition": null,
+                    "status": 0,
+                    "branch_code": 0
+                }
+            ],
+            "expr_no": "STC202411110956235774",
+            "vials_count": 1
+        }
+    ]
+}

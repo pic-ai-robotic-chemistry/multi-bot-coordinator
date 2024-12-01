@@ -1,0 +1,236 @@
+{
+    "workstation_list": [# A list containing information on all workstations in the laboratory, with each entry representing a workstation. 
+        {
+            "id": 1602558355258351616, # Workstation ID, globally unique, representing a workstation.
+            "workstationType": "starting_station",# Workstation Type, not unique, different workstations can belong to the same type. For example, Workstation A_1 and A_2 can both belong to Type A.
+            "name": "starting_station",# Workstation Name. Can be any value, using user-friendly language.
+            "code": "starting_station",# Workstation Code. Globally unique, similar to ID but can use user-friendly language.
+            "status": "IDLE",# Workstation Status, indicating whether the workstation is idle or not.
+            "electricityQuantity": null,# Battery Level, not applicable to workstations that are plugged in; used for robots, which are logically considered workstations.
+            "bottleSlotCount": 160,# Workstation Capacity, indicating the maximum number of bottles the workstation can handle simultaneously in a batch.
+            "bottleCount": 1,# Number of bottles currently at the workstation.
+            "isRobot": 0,# Indicates whether the workstation is a robot.
+            "machineList": [# Components in the workstation, with each member of the list representing a component of the workstation.
+                {
+                    "machineTypeCode": "starting_station",# Component Type.
+                    "channelList": null # Channels. For example, information about the channels for different materials in a liquid dispensing station can be stored here.
+                }
+            ],
+            "bottleList": [# Information of bottles currently at the workstation, used for tracking bottle locations.
+                {
+                    "bottleCode": "bottle-1809399055726551045",# Unique bottle code.
+                    "rackId": 1809399055726551043 # Unique rack code.
+                }
+            ],
+            "sectionList": [ # Section within the Laboratory. Laboratory equipment may be divided into multiple sections. In our laboratory, workstations are divided into laboratory sections and high-throughput platform sections, as described in the paper.
+                {
+                    "sectionCode": "lab",
+                    "sectionName": "lab"
+                }
+            ],
+            "remark": null # Personalized remarks for the workstation.
+        },
+        {
+            "id": 1612694273754807297,
+            "workstationType": "robot",
+            "name": "robot_0",
+            "code": "robot_0",
+            "status": "IDLE",
+            "electricityQuantity": 95.0,
+            "currentStation": "starting_station",
+            "bottleSlotCount": 40,
+            "bottleCount": 0,
+            "isRobot": 1,
+            "machineList": [
+                {
+                    "machineTypeCode": "robot",
+                    "channelList": null
+                }
+            ],
+            "bottleList": [],
+            "sectionList": [
+                {
+                    "sectionCode": "lab",
+                    "sectionName": "lab"
+                }
+            ],
+            "remark": null
+        },
+        {
+            "id": 1610457648401096704,
+            "workstationType": "magnetic_stirring",
+            "name": "magnetic_stirring",
+            "code": "magnetic_stirring",
+            "status": "IDLE",
+            "electricityQuantity": null,
+            "bottleSlotCount": 10,
+            "bottleCount": 0,
+            "isRobot": 0,
+            "machineList": [
+                {
+                    "machineTypeCode": "magnetic_stirring",
+                    "channelList": null
+                }
+            ],
+            "bottleList": [],
+            "sectionList": [
+                {
+                    "sectionCode": "lab",
+                    "sectionName": "lab"
+                }
+            ],
+            "remark": null
+        }
+    ],
+    "bottle_execute_record_list": [# List for storing bottle operation records.
+        # This is a record of the robot named "robot_1c" taking the bottle named "bottle-12345678" from the sample rack.
+        {
+            "id": 1859477102911426560, # Identifies a unique record.
+            "createdTime": "2024-11-11 14:01:03", # Creation time of the Instruction.
+            "updatedTime": "2024-11-11 14:01:05", # Update time of the Instruction, recorded when the instruction is created or when the instruction status changes from processing to finish.
+            "createdUser": null,
+            "updatedUser": null,
+            "deleteStatus": 0,
+            "stepId": 6000871142883328, # Corresponds to the stepID in the task_list below.
+            "index": 1, # Corresponds to the step index in the task_list below.
+            "operation": "take", # Operation, as described in the paper, generally includes three types: take, put, and start. Among them, take and put are performed by robots, while start is performed by the workstation.
+            "status": "finish",# Operation Status, typically represented by processing and finish.
+            "workstation": "starting_station", # Workstation code, explained in the workstation_list.
+            "workstationType": "starting_station",# Workstation type, explained in the workstation_list.
+            "finishTime": "1732168865482", # Finish time of the Instruction.
+            "time": null, # Time parameter of the Instruction, typically only present in start instructions for workstations that have a time parameter.
+            "scheduleId": 00000001, # Instruction Number for the Scheduling Algorithm.
+            "robot": "robot_1",# Which robot participated in this instruction.
+            "expr_no": "STC202411211400538312",# Experiment Number, explanation see the task_list below.
+            "branch_code": 0,# Deprecated.
+            "bottle_code": "bottle-12345678", Bottle code of the sample operated by the instruction.
+            "material_list": []# If it is a dispensing workstation, material information will be stored here.
+        }
+    ], 
+    "robot_list": [#List storing all robot information, where the robot information is identical to that in the workstation_list. The difference is that the robot_list only contains information about robots, not about workstations.
+        {
+            "id": 1612694273754807297,
+            "workstationType": "robot",
+            "name": "robot_0",
+            "code": "robot_0",
+            "status": "IDLE",
+            "electricityQuantity": 95.0,
+            "currentStation": "starting_station",
+            "bottleSlotCount": 40,
+            "bottleCount": 0,
+            "isRobot": 1,
+            "machineList": [
+                {
+                    "machineTypeCode": "robot",
+                    "channelList": null
+                }
+            ],
+            "bottleList": [],
+            "sectionList": [
+                {
+                    "sectionCode": "lab",
+                    "sectionName": "lab"
+                }
+            ],
+            "remark": null
+        }
+    ],
+    "task_list": [# Experiments information, containing the experimental tasks issued by users from the GUI page.
+        {
+            "name": "simple_example",# Experiment Name.
+            "steps": [# Specific steps of the Experiments.
+                {
+                    "id": 5609691746369538,# step ID, unique
+                    "index": 1,# Sequence number of the step in the entire experiment.
+                    "workstation": "starting_station",# Workstation name for performing the step.
+                    "detail": [# Detailed information of the step.
+                        {
+                            "material": null, # If it is a dispensing workstation, material information will be filled in.
+                            "concentration": null,# If it is a dispensing workstation, material concentration information will be filled in.
+                            "value": null,# If it is a dispensing workstation, material value information will be filled in.
+                            "vials_no": "1", # Relative number of the bottle to be processed in the experiment.
+                            "actual_no": null,# When taking bottles from the sample rack, the system assigns the absolute number, i.e., bottle-code, to the bottles included in the task. From this point on, the relative number vials_no of the bottle in the task will be bound to the absolute number.
+                            "material_code": null,# Each material corresponds to a material_code.
+                            "concentration_unit_code": null # The same material may have different concentrations, and the scheduling algorithm needs to consider concentration information to assign bottles from different steps to different dispensing stations.
+                        }
+                    ],
+                    "time": null, # Time parameter corresponding to the step.
+                    "parameters": [# Other parameters corresponding to the step.
+                        {
+                            "machineTypeCode": "starting_station",
+                            "param": {
+                                "bottle_appoint": "0",
+                                "bottle_count": "1",
+                                "bottle_mapping_list": ""
+                            }
+                        }
+                    ],
+                    "condition": null, # Deprecated.
+                    "status": 0, # Deprecated.
+                    "branch_code": 0 # Deprecated.
+                },
+                {
+                    "id": 5609691746369537,
+                    "index": 2,
+                    "workstation": "magnetic_stirring",
+                    "detail": [
+                        {
+                            "material": null,
+                            "concentration": null,
+                            "value": null,
+                            "vials_no": "1",
+                            "actual_no": null,
+                            "material_code": null,
+                            "concentration_unit_code": null
+                        }
+                    ],
+                    "time": 10.0,
+                    "parameters": [
+                        {
+                            "machineTypeCode": "magnetic_stirring",
+                            "param": {
+                                "temperature": "20",
+                                "speed": "500"
+                            }
+                        }
+                    ],
+                    "condition": null,
+                    "status": 0,
+                    "branch_code": 0
+                },
+                {
+                    "id": 5609691746402304,
+                    "index": 3,
+                    "workstation": "starting_station",
+                    "detail": [
+                        {
+                            "material": null,
+                            "concentration": null,
+                            "value": null,
+                            "vials_no": "1",
+                            "actual_no": null,
+                            "material_code": null,
+                            "concentration_unit_code": null
+                        }
+                    ],
+                    "time": null,
+                    "parameters": [
+                        {
+                            "machineTypeCode": "starting_station",
+                            "param": {
+                                "bottle_appoint": "0",
+                                "bottle_count": "1",
+                                "bottle_mapping_list": ""
+                            }
+                        }
+                    ],
+                    "condition": null,
+                    "status": 0,
+                    "branch_code": 0
+                }
+            ],
+            "expr_no": "STC202411110956235774",# Experiments ID, unique.
+            "vials_count": 1 # Number of Bottles Included in the Experiment. Task scheduling is done on a per-bottle basis.
+        }
+    ]
+}
